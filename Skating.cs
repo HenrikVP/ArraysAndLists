@@ -1,41 +1,43 @@
 ﻿namespace ArraysAndLists
 {
-    internal static class Skating
+    internal class Skating
     {
-        private static string[] SkatingStuff = new string[5];
-        private static int counter;
+        //private static string[] SkatingStuff = new string[5];
+        List<object> list = new List<object>() { "One","Two", 3};
 
-        public static void AddSkatingStuff()
+        object[] objArr = new object[3];
+        
+        void AddToObjectArray()
         {
+            objArr[0] = 3;
+            objArr[1] = "Fourth";
+        }
+        void AddToList()
+        {
+            list.Add("Three");
+        }
+
+        void PrintList()
+        {
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        public static string[] AddSkatingStuff()
+        {
+            string[] SkatingStuff = new string[5];
             SkatingStuff[0] = "Rulleskøjter";
             SkatingStuff[1] = "Longboard";
             SkatingStuff[2] = "Løbehjul";
             SkatingStuff[3] = "Skateboard";
             SkatingStuff[4] = "Strygebræt";
             //SkatingStuff[5] = "IsThisEvenPossible?"; NO!
-
+            return SkatingStuff;
         }
 
-
-        internal static void PrintArray()
-        {
-            foreach (var item in SkatingStuff)
-            {
-                Console.WriteLine(item);
-            }
-
-            for (int i = 0; i < SkatingStuff.Length; i++)
-            {
-                Console.WriteLine(SkatingStuff[i] + " " + i);
-            }
-
-
-            while (counter < SkatingStuff.Length)
-            {
-                Console.WriteLine(SkatingStuff[counter]);
-                counter++;
-            }
-        }
+        
 
     }
 }

@@ -1,19 +1,10 @@
 ﻿using ArraysAndLists;
-using NewProject;
 
-Skating.AddSkatingStuff();
-Skating.PrintArray();
+//using NewProject;
 
-NewProjectClass npc1 = new NewProjectClass();
-//namespace ArraysAndLists
-//{
-//    class Program
-//    {
-//        static void Main(string[] args)
-//        {
-
-//        }
-//    }
+string[] tempArray = Skating.AddSkatingStuff();
+new Tools().WriteArray(tempArray);
 
 
-//}
+new MultiDimArray().PrintMultiDArray();
+//NewProjectClass npc1 = new NewProjectClass();
